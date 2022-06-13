@@ -25,7 +25,7 @@ class StoreTaskRequest extends FormRequest
     {
         return [
             'title' => ['required','string'],
-            'done' => ['boolean']
+            'done' => ['boolean'],
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
@@ -40,6 +41,7 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request,Task $task)
     {
+
         Task::create($request->validated());
 
         return redirect()->route('tasks.index');
